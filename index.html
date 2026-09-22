@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Witte Huis met bouwput — LEGO-set (3D)</title>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+<style>
+  html, body { margin: 0; min-height: 100%; background: #efeae1; color: #2a2724;
+    font-family: ui-sans-serif, "Helvetica Neue", Helvetica, sans-serif; }
+  a { color: #8a5a20; }
+  a:hover { color: #5e3c12; }
+  three-d-stage:not(:defined) { visibility: hidden; }
+  three-d-stage { display: block; width: 100%; height: 100%; }
+  .page { display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh; }
+  header { display: grid; gap: 6px; padding: 28px 28px 14px; max-width: 760px; }
+  h1 { margin: 0; font-size: clamp(22px, 3.4vw, 34px); font-weight: 650; letter-spacing: -0.01em; }
+  header p { margin: 0; font-size: 15px; line-height: 1.5; color: #5c554c; text-wrap: pretty; }
+  .stage-wrap { min-height: 60vh; margin: 0 14px; border: 1px solid #ded5c6; border-radius: 10px;
+    overflow: hidden; background: #efeae1; }
+  footer { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 14px 28px 26px;
+    font-size: 13px; color: #6c655b; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Witte Huis met bouwput</h1>
+    <p>Een LEGO-set van het Witte Huis waarbij de West Wing is gesloopt: op die plek ligt een
+      uitgegraven bouwput met funderingsblokken, sloopafval, hekwerk en een toegangsramp.</p>
+  </header>
+  <div class="stage-wrap">
+    <three-d-stage name="lego-white-house-construction" background="#efeae1" autorotate></three-d-stage>
+  </div>
+  <footer>
+    <span>Slepen om te draaien &middot; scrollen om te zoomen &middot; rechtsklik-slepen om te schuiven</span>
+    <span>Download als OBJ&nbsp;+&nbsp;MTL of GLB via de knoppen in de weergave</span>
+  </footer>
+</div>
+<script src="./three-d-stage.js"></script>
+<script type="module" src="./white-house-model.js"></script>
+</body>
+</html>
