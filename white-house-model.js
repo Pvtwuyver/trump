@@ -299,8 +299,8 @@ fig.rotation.y = 0.35;
 model.add(fig);
 
 /* ---------------- retail box behind the set ---------------- */
-// Set to a logo image path (e.g. './logo.png') to print it in the logo area of the box.
-const LOGO_URL = './logo.png';
+// Logo printed on the box. Place logo.png next to index.html (filename is case-sensitive on GitHub Pages).
+const LOGO_URL = 'logo.png';
 
 function renderPreview() {
   const r = stage._renderer;
@@ -368,6 +368,7 @@ frontTex.anisotropy = 8;
 if (LOGO_URL) {
   const li = new Image();
   li.onload = () => { drawFront(li); frontTex.needsUpdate = true; };
+  li.onerror = () => console.info('No logo found at', LOGO_URL, '- using placeholder.');
   li.src = LOGO_URL;
 }
 const boxFront = new T.MeshStandardMaterial({ map: frontTex, roughness: 0.6 }); boxFront.name = 'box_front';
