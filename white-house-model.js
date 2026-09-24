@@ -300,7 +300,7 @@ model.add(fig);
 
 /* ---------------- retail box behind the set ---------------- */
 // Set to a logo image path (e.g. './logo.png') to print it in the logo area of the box.
-const LOGO_URL = 'logo.png';
+const LOGO_URL = '/logo.png';
 
 function renderPreview() {
   const r = stage._renderer;
